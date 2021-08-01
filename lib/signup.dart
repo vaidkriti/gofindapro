@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/Additional.dart';
 import 'package:flutter_project/login.dart';
 
 class SignUp extends StatefulWidget {
@@ -36,9 +37,14 @@ class _SignUpState extends State<SignUp> {
                   height: 100.0,
                   width: 1500.0,
                 ),
-                Text(
-                  "GOFINDAPRO",
-                  style: TextStyle(fontSize: 27.0, fontWeight: FontWeight.w600),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>new Additional() ));
+                  },
+                  child: Text(
+                    "GOFINDAPRO",
+                    style: TextStyle(fontSize: 27.0, fontWeight: FontWeight.w600),
+                  ),
                 ),
               ],
             ),
